@@ -1,0 +1,55 @@
+{
+  "name": "leime",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format:fix": "prettier --write .",
+    "lint:fix": "eslint ./src --fix --color",
+    "prepare": "husky",
+    "test": "vitest --run",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.13.7",
+    "@apollo/server": "^4.12.0",
+    "@as-integrations/next": "^3.2.0",
+    "graphql": "^16.10.0",
+    "graphql-scalars": "^1.24.2",
+    "next": "^15.1.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@next/eslint-plugin-next": "^15.2.0",
+    "@types/node": "22.13.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-define-config": "^2.1.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-compiler": "^19.0.0-beta-decd7b8-20250118",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "prettier": "3.4.2",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

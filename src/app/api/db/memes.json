@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Project idea",
+    "imgUrl": "/images/projectIdea.jpg"
+  },
+  {
+    "name": "FrontEnd is useless",
+    "imgUrl": "/images/frontEndIsUseless.jpg"
+  },
+  {
+    "name": "git commit",
+    "imgUrl": "/images/git.jpg"
+  },
+  {
+    "name": "Progress",
+    "imgUrl": "/images/progress.jpg"
+  },
+  {
+    "name": "It dosn't work",
+    "imgUrl": "/images/doesntWork.webp"
+  },
+  {
+    "name": "Drawing on Canvas",
+    "imgUrl": "/images/canvas.webp"
+  },
+  {
+    "name": "I Know TypeScript",
+    "imgUrl": "/images/iKnowTypeScript.jpg"
+  },
+  {
+    "name": "When You Deploy on Friday",
+    "imgUrl": "/images/DeployOnFriday.webp"
+  },
+  {
+    "name": "CSS Be Like...",
+    "imgUrl": "/images/CSSBeLike.webp"
+  },
+  {
+    "name": "Just One More Feature",
+    "imgUrl": "/images/justOneMoreFeature.webp"
+  }
+]
