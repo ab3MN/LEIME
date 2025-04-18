@@ -2,6 +2,6 @@ export interface Meme {
   name: string;
   imgUrl: string;
   id: string;
-  timestamp: number;
+  timestamp: string;
   likes: number;
 }

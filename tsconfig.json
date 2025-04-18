@@ -9,8 +9,10 @@
     ],
     "paths": {
       "@app/*": ["app/*"],
-      "@utils/*": ["utils/*"],
-      "@graphql/*": ["graphql/*"]
+      "@components/*": ["components/*"],
+      "@constants/*": ["constants/*"],
+      "@graphql/*": ["graphql/*"],
+      "@utils/*": ["utils/*"]
     },
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -28,5 +30,5 @@
     "strictNullChecks": true
   },
   "include": ["**/*.ts", "**/*.tsx", "./dist/types/**/*.ts", "next-env.d.ts", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".next"]
 }

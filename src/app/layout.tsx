@@ -1,6 +1,9 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 
+import './global.css';
+import { Header } from '@components/Header/Header';
+
 export const metadata: Metadata = {
   title: 'Funny Memes',
   description: 'funny memes about programming',
@@ -13,7 +16,9 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       <body>
-        <main> {children}</main>
+        <Header />
+
+        <main className="px-4"> {children}</main>
       </body>
     </html>
   );

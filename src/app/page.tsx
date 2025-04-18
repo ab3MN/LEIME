@@ -1,6 +1,6 @@
-import { getMemes } from 'graphql/meme';
+import { getMemes } from '@graphql/meme';
 
-export default async function Page() {
+export default async function RootPage() {
   const memes = await getMemes();
 
   console.log(memes);

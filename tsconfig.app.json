@@ -24,14 +24,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "exactOptionalPropertyTypes": true,
-    "forceConsistentCasingInFileNames": true,
-    /* Paths */
-    "baseUrl": "./src",
-    "paths": {
-      "@app/*": ["app/*"],
-      "@utils/*": ["utils/*"],
-      "@graphql/*": ["graphql/*"]
-    }
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src"]
 }
