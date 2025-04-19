@@ -1,7 +1,4 @@
 {
-  "/api/graphql/route": "app/api/graphql/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/list/page": "app/list/page.js",
-  "/page": "app/page.js",
-  "/table/page": "app/table/page.js"
+  "/table/page": "app/table/page.js",
+  "/page": "app/page.js"
 }

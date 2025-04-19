@@ -1,5 +1,5 @@
 import { Navbar, NavbarContent, NavbarItem } from '@heroui/react';
-import { NavLink } from '@components/NavLink/NavLink';
+import { NavLink } from '@ui/NavLink/NavLink';
 import { PATH } from '@constants/path';
 
 const navItems = [
@@ -19,7 +19,7 @@ const navItems = [
 
 export const Navigation = () => {
   return (
-    <Navbar>
+    <Navbar className="justify-start">
       <NavbarContent className="sm:flex gap-4 justify-center">
         {navItems.map(({ href, title }) => (
           <NavbarItem key={title}>

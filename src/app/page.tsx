@@ -1,9 +1,3 @@
-import { getMemes } from '@graphql/meme';
-
-export default async function RootPage() {
-  const memes = await getMemes();
-
-  console.log(memes);
-
+export default function RootPage() {
   return <div>Home Page</div>;
 }

@@ -12,7 +12,8 @@
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
       "@graphql/*": ["graphql/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@ui/*": ["ui/*"]
     },
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],

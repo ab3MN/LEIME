@@ -11,6 +11,17 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
+    "/table/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/table/loading.css",
+      "static/chunks/app/table/loading.js"
+    ],
+    "/table/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/table/page.js"
+    ],
     "/api/graphql/route": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -21,10 +32,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/list/page.js"
     ],
-    "/table/page": [
+    "/error": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/table/page.js"
+      "static/chunks/app/error.js"
+    ],
+    "/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/not-found.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",

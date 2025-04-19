@@ -1,9 +1,9 @@
+import { MemeTable } from '@components/MemeTable/MemeTable';
 import { getMemes } from '@graphql/meme';
+import { Meme } from 'types';
 
 export default async function TablePage() {
-  const memes = await getMemes();
+  const memes: Meme[] = await getMemes();
 
-  console.log(memes);
-
-  return <div>Table Page</div>;
+  return <MemeTable memes={memes} />;
 }

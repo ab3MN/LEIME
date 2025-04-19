@@ -48,24 +48,23 @@ const resolvers = {
     memes: () =>
       memes.map((meme: Meme) => ({
         ...meme,
-        imgUrl: `${process.env.HOST}/${meme.imgUrl}`,
-        likes: generateRandomNumbers(MAX_LIKES),
+        likes: meme.likes ? meme.likes : generateRandomNumbers(MAX_LIKES),
       })),
   },
 
   Mutation: {
     updateMeme: (_: unknown, { id, data }: { id: string; data: Omit<Meme, 'timestamp' | 'id'> }) => {
-      const isMemeExsist = memes.find((meme: Meme) => meme.id === id);
+      const idx = memes.findIndex((meme: Meme) => meme.id === id);
 
-      if (!isMemeExsist) throw new Error('Meme not found');
+      if (idx === -1) throw new Error('Meme not found');
 
-      const updatedMemo = { id, ...data, timestamp: new Date().toISOString() };
+      memes[idx] = { id, ...data, timestamp: new Date().toISOString() };
 
-      const updatedMemes = memes.map((meme: Meme) => (meme.id !== id ? meme : updatedMemo));
+      fs.writeFile(memesPath, JSON.stringify(memes, null, 2), (err) => {
+        if (err) console.error(err.message);
+      });
 
-      fs.writeFileSync(memesPath, JSON.stringify(updatedMemes, null, 2));
-
-      return updatedMemo;
+      return memes[idx];
     },
   },
 };
