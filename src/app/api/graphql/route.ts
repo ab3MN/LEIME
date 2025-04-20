@@ -48,7 +48,7 @@ const resolvers = {
     memes: () =>
       memes.map((meme: Meme) => ({
         ...meme,
-        likes: meme.likes ? meme.likes : generateRandomNumbers(MAX_LIKES),
+        likes: meme.likes !== -1 ? meme.likes : generateRandomNumbers(MAX_LIKES),
       })),
   },
 

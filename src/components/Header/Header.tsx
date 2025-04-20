@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const Header = () => (
-  <header className="flex justify-between items-center px-2 border-b-2 border-state-500">
+  <header className="flex justify-between items-center px-2 border-b-2 border-state-500 mb-4">
     <h1>
       <Link href={PATH.HOME}>
         <Image

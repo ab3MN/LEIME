@@ -27,7 +27,7 @@ const Error: FC<Props> = ({ error, reset }) => {
         <p className="text-sm text-gray-500 mb-6 italic">
           <strong>Error:</strong> {error.message}
         </p>
-        <div className="flex justify-center gap-3">
+        <div className="flex justify-center gap-3  items-center">
           <Button onClick={reset}>Try again</Button>
 
           <CustomLink

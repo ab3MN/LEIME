@@ -1,3 +1,4 @@
-export default async function ListPage() {
-  return <div>List Page</div>;
-}
+import { MemeList } from '@components/MemeList/MemeList';
+import { withMemes } from 'hocs/withMemes';
+
+export default withMemes(MemeList);
