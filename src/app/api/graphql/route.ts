@@ -20,7 +20,7 @@ const typeDefs = `#graphql
     type Meme {
       id: ID!
       timestamp: DateTime!
-      name: String!
+      title: String!
       imgUrl: URL!
       likes: Float!
     }
@@ -30,7 +30,7 @@ const typeDefs = `#graphql
     }
 
     input MemeInput {
-      name: String!
+      title: String!
       imgUrl: URL!
       likes: Float!
     }

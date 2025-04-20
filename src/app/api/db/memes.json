@@ -1,70 +1,70 @@
 [
   {
     "id": "e9ab45b4-e7ee-4d95-a726-b90efc162151",
-    "name": "test update",
+    "title": "test update",
     "imgUrl": "http://localhost:3030/images/projectIdea.jpg",
     "likes": -1,
     "timestamp": "2025-04-19T07:56:40.904Z"
   },
   {
     "id": "3768ec30-5cd1-4b09-bcd3-5920a94598bb",
-    "name": "FrontEnd is useless",
+    "title": "FrontEnd is useless",
     "imgUrl": "http://localhost:3030/images/frontEndIsUseless.jpg",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "a6dcd856-de6f-4d38-85ad-ff73cc8cbd1f",
-    "name": "git commit",
+    "title": "git commit",
     "imgUrl": "http://localhost:3030/images/git.jpg",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "3c193db4-63f9-4797-a07d-64aaf2cdc65e",
-    "name": "Progress",
+    "title": "Progress",
     "imgUrl": "http://localhost:3030/images/progress.jpg",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "cd8bf327-ea3f-4121-98d7-d78b01ded3ac",
-    "name": "It dosn't work",
+    "title": "It dosn't work",
     "imgUrl": "http://localhost:3030/images/doesntWork.webp",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "9877afd4-1fee-4ad4-ab31-abf93cbb375e",
-    "name": "Drawing on Canvas",
+    "title": "Drawing on Canvas",
     "imgUrl": "http://localhost:3030/images/canvas.webp",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "4a3187d1-15c0-418c-adef-86fa46d46f5f",
-    "name": "I Know TypeScript",
+    "title": "I Know TypeScript",
     "imgUrl": "http://localhost:3030/images/iKnowTypeScript.jpg",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "e2d7b3c5-9d5e-46d9-aa89-6c7251ec2348",
-    "name": "When You Deploy on Friday",
+    "title": "When You Deploy on Friday",
     "imgUrl": "http://localhost:3030/images/DeployOnFriday.webp",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "65f19080-469c-40bd-8062-44929a206afa",
-    "name": "CSS Be Like...",
+    "title": "CSS Be Like...",
     "imgUrl": "http://localhost:3030/images/CSSBeLike.webp",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "d7ddf729-66c1-4a62-bb3d-d69652a8d2e2",
-    "name": "Just One More Feature",
+    "title": "Just One More Feature",
     "imgUrl": "http://localhost:3030/images/justOneMoreFeature.webp",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1

@@ -9,7 +9,7 @@ interface Props {
 
 export const CustomLink: FC<Props> = ({ href, label, target = '_self' }) => (
   <Link
-    className="text-state-600 hover:text-zinc-400 font-bold"
+    className="text-state-600 hover:text-fuchsia-400 font-bold"
     href={href}
     target={target}
   >

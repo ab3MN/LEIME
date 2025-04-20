@@ -11,7 +11,7 @@ interface Props {
 export const MemeList: FC<Props> = ({ memes }) => {
   return (
     <ul className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 px-8 space-y-4">
-      {memes.map(({ id, name, likes, imgUrl }) => (
+      {memes.map(({ id, title, likes, imgUrl }) => (
         <li key={id}>
           <Card
             className="break-inside-avoid mb-4 relative text-white font-bold"
@@ -21,13 +21,13 @@ export const MemeList: FC<Props> = ({ memes }) => {
               <h4 className="text-sm">
                 <CustomLink
                   href={`list/${id}`}
-                  label={name}
+                  label={title}
                 />
               </h4>
             </CardHeader>
             <Image
               removeWrapper
-              alt={name}
+              alt={title}
               className="w-full h-auto rounded"
               src={imgUrl}
             />
