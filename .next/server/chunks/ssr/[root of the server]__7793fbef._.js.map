@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file://C%3A/ab3/rest-client-app/src/ui/NavLink/NavLink.tsx"],"sourcesContent":["'use client';\r\n\r\nimport Link from 'next/link';\r\nimport { usePathname } from 'next/navigation';\r\nimport { FC } from 'react';\r\n\r\ninterface Props {\r\n  href: string;\r\n  title: string;\r\n}\r\n\r\nexport const NavLink: FC<Props> = ({ href, title }) => {\r\n  const pathname = usePathname();\r\n\r\n  return (\r\n    <Link\r\n      className={`pe-2 ${pathname === href ? 'text-fuchsia-400' : 'text-state-600'}  hover:text-fuchsia-400 font-bold`}\r\n      href={href}\r\n    >\r\n      {title}\r\n    </Link>\r\n  );\r\n};\r\n"],"names":[],"mappings":";;;;AAEA;AACA;AAHA;;;;AAWO,MAAM,UAAqB,CAAC,EAAE,IAAI,EAAE,KAAK,EAAE;IAChD,MAAM,WAAW,CAAA,GAAA,kIAAA,CAAA,cAAW,AAAD;IAE3B,qBACE,8OAAC,4JAAA,CAAA,UAAI;QACH,WAAW,CAAC,KAAK,EAAE,aAAa,OAAO,qBAAqB,iBAAiB,kCAAkC,CAAC;QAChH,MAAM;kBAEL;;;;;;AAGP","debugId":null}}]
-}

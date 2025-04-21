@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/ab3/New%20folder/LEIME/src/app/list/%5Bid%5D/loading.tsx"],"sourcesContent":["import { Loader } from '@ui/Loader/Loader';\r\n\r\nexport default function Loading() {\r\n  return <Loader />;\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;;AAEe,SAAS;IACtB,qBAAO,8OAAC,8HAAA,CAAA,SAAM;;;;;AAChB","debugId":null}}]
-}
