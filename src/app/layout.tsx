@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
-      <body className={clsx(freckleFace.className, 'min-h-[100dvh] flex flex-col')}>
+      <body className={clsx(freckleFace.className, 'min-h-[100dvh] flex flex-col relative')}>
         <Header />
         <main> {children}</main>
         <Footer />

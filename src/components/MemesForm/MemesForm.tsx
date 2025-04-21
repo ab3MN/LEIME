@@ -65,7 +65,7 @@ export const MemesForm: FC<Props> = ({ meme }) => {
 
       <Button
         type="submit"
-        className={clsx(buttonStyles, 'px-[50px] mx-auto block')}
+        className={clsx(buttonStyles, 'px-[50px] py-[10px] mx-auto block')}
       >
         Submit
       </Button>
