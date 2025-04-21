@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/ab3/rest-client-app/src/ui/Containers/SectionContainer.tsx"],"sourcesContent":["import { FC, ReactNode } from 'react';\r\n\r\ninterface Props {\r\n  children: ReactNode;\r\n}\r\n\r\nexport const SectionContainer: FC<Props> = ({ children }) => <section className=\"mb-4\">{children}</section>;\r\n"],"names":[],"mappings":";;;;;AAMO,MAAM,mBAA8B,CAAC,EAAE,QAAQ,EAAE,iBAAK,8OAAC;QAAQ,WAAU;kBAAQ","debugId":null}},
+    {"offset": {"line": 26, "column": 0}, "map": {"version":3,"sources":["file://C%3A/ab3/rest-client-app/src/app/table/layout.tsx"],"sourcesContent":["import { ReactNode } from 'react';\r\nimport type { Metadata } from 'next';\r\nimport { SectionContainer } from '@ui/Containers/SectionContainer';\r\n\r\nexport const metadata: Metadata = {\r\n  title: 'Funny memes table',\r\n};\r\n\r\nconst TableLoyaut = ({ children }: { children: ReactNode }) => {\r\n  return <SectionContainer>{children}</SectionContainer>;\r\n};\r\n\r\nexport default TableLoyaut;\r\n"],"names":[],"mappings":";;;;;AAEA;;;AAEO,MAAM,WAAqB;IAChC,OAAO;AACT;AAEA,MAAM,cAAc,CAAC,EAAE,QAAQ,EAA2B;IACxD,qBAAO,8OAAC,4IAAA,CAAA,mBAAgB;kBAAE;;;;;;AAC5B;uCAEe","debugId":null}}]
+}

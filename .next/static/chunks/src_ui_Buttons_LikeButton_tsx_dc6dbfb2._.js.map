@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/ab3/rest-client-app/src/ui/Buttons/LikeButton.tsx"],"sourcesContent":["'use client';\r\n\r\nimport { Button } from '@heroui/react';\r\nimport { HeartIcon } from '@heroicons/react/24/outline';\r\nimport { HeartIcon as HeartSolid } from '@heroicons/react/24/solid';\r\nimport { FC } from 'react';\r\n\r\ninterface Props {\r\n  likes: number;\r\n  onClick?: () => void;\r\n}\r\n\r\nexport const LikeButton: FC<Props> = ({ likes, onClick }) => (\r\n  <Button onClickCapture={onClick}>\r\n    {likes ?\r\n      <HeartSolid\r\n        width={24}\r\n        height={24}\r\n        className=\"text-red-400 hover:text-red-600\"\r\n      />\r\n    : <HeartIcon\r\n        width={24}\r\n        height={24}\r\n      />\r\n    }\r\n  </Button>\r\n);\r\n"],"names":[],"mappings":";;;;AAEA;AACA;AACA;AAJA;;;;;AAYO,MAAM,aAAwB,CAAC,EAAE,KAAK,EAAE,OAAO,EAAE,iBACtD,6LAAC,+MAAA,CAAA,SAAM;QAAC,gBAAgB;kBACrB,sBACC,6LAAC,kNAAA,CAAA,YAAU;YACT,OAAO;YACP,QAAQ;YACR,WAAU;;;;;iCAEZ,6LAAC,oNAAA,CAAA,YAAS;YACR,OAAO;YACP,QAAQ;;;;;;;;;;;KAVH","debugId":null}}]
+}

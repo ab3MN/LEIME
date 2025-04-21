@@ -28,7 +28,7 @@ const Error: FC<Props> = ({ error, reset }) => {
           <strong>Error:</strong> {error.message}
         </p>
         <div className="flex justify-center gap-3  items-center">
-          <Button onClick={reset}>Try again</Button>
+          <Button onPress={reset}>Try again</Button>
 
           <CustomLink
             href={PATH.HOME}

@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run open-browser && next dev -p 3030",
+    "dev": "npm run open-browser && next dev -p 3030 --turbopack",
     "open-browser": "start http://localhost:3030",
     "build": "next build",
     "start": "next start",
@@ -22,6 +22,7 @@
     "@heroui/accordion": "^2.2.14",
     "@heroui/react": "^2.7.6",
     "@hookform/resolvers": "^5.0.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.7.4",
     "graphql": "^16.10.0",
     "graphql-scalars": "^1.24.2",

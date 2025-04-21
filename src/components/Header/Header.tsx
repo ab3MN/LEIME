@@ -13,6 +13,7 @@ export const Header = () => (
           height={48}
           alt="logo"
           priority
+          loading="eager"
         />
       </Link>
     </h1>

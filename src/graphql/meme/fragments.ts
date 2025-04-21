@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
-export const MEME_FIELDS = gql`
-  fragment MemeFields on Meme {
+export const MEME_FRAGMENT = gql`
+  fragment MemeFragment on Meme {
     id
     title
     imgUrl

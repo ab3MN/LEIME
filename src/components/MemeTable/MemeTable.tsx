@@ -48,7 +48,7 @@ export const MemeTable: FC<Props> = ({ memes }) => {
               <TableCell className="text-center">{meme.likes}</TableCell>
               <TableCell className="text-center">
                 <Button
-                  onClick={() => {
+                  onPress={() => {
                     onOpen();
                     setSelectedMeme(meme);
                   }}

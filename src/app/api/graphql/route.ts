@@ -3,15 +3,15 @@ import { startServerAndCreateNextHandler } from '@as-integrations/next';
 import { NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
-import memes from '../db/memes.json';
-import { LocalhostURLScalar } from '../scalars/LocalhostURLScalar';
 import { DateTimeResolver } from 'graphql-scalars';
+
 import { Meme } from 'types';
-import { generateRandomNumbers } from '@utils/generateRandomNumbers';
+import { getMemeLikes } from '@utils/getMemeLikes';
+import { LocalhostURLScalar } from '../scalars/LocalhostURLScalar';
+
+import memes from '../db/memes.json';
 
 const memesPath = path.join(process.cwd(), 'src/app/api/db/memes.json');
-
-const MAX_LIKES = 99;
 
 const typeDefs = `#graphql
     scalar URL
@@ -27,6 +27,7 @@ const typeDefs = `#graphql
 
     type Query {
       memes: [Meme!]!
+      meme(id: ID!): Meme
     }
 
     input MemeInput {
@@ -45,11 +46,17 @@ const resolvers = {
   URL: LocalhostURLScalar,
 
   Query: {
-    memes: () =>
-      memes.map((meme: Meme) => ({
-        ...meme,
-        likes: meme.likes !== -1 ? meme.likes : generateRandomNumbers(MAX_LIKES),
-      })),
+    memes: () => memes.map((meme: Meme) => ({ ...meme, likes: getMemeLikes(meme) })),
+
+    meme: (_: unknown, { id }: { id: string }) => {
+      const findedMeme = memes.find((meme) => meme.id === id);
+
+      if (!findedMeme) {
+        throw new Error('Meme not found');
+      }
+
+      return { ...findedMeme, likes: getMemeLikes(findedMeme) };
+    },
   },
 
   Mutation: {

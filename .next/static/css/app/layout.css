@@ -584,6 +584,9 @@
   .-mr-2 {
     margin-right: calc(var(--spacing) * -2);
   }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
+  }
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
   }
@@ -742,6 +745,9 @@
   }
   .h-40 {
     height: calc(var(--spacing) * 40);
+  }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
   }
   .h-\[--visual-viewport-height\] {
     height: --visual-viewport-height;
@@ -955,6 +961,9 @@
   }
   .max-w-\[270px\] {
     max-width: 270px;
+  }
+  .max-w-\[400px\] {
+    max-width: 400px;
   }
   .max-w-\[640px\] {
     max-width: 640px;
@@ -1656,6 +1665,9 @@
       background-color: color-mix(in oklab, var(--color-black) 70%, transparent);
     }
   }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
+  }
   .bg-current {
     background-color: currentcolor;
   }
@@ -1730,6 +1742,9 @@
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
   }
   .\!px-1 {
     padding-inline: calc(var(--spacing) * 1) !important;
@@ -3626,6 +3641,13 @@
       }
     }
   }
+  .hover\:bg-blue-600 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-600);
+      }
+    }
+  }
   .hover\:bg-fuchsia-400 {
     &:hover {
       @media (hover: hover) {
@@ -3694,6 +3716,23 @@
     &:focus {
       --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-2 {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-blue-500 {
+    &:focus {
+      --tw-ring-color: var(--color-blue-500);
+    }
+  }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
     }
   }
   .focus-visible\:z-10 {

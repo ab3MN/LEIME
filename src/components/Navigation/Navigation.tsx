@@ -1,3 +1,5 @@
+'use client';
+
 import { Navbar, NavbarContent, NavbarItem } from '@heroui/react';
 import { NavLink } from '@ui/NavLink/NavLink';
 import { PATH } from '@constants/path';
