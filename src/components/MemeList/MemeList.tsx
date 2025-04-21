@@ -28,5 +28,3 @@ export const MemeList = () => {
     </ul>
   );
 };
-
-// export default MemeList;
