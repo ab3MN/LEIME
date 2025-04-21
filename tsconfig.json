@@ -12,6 +12,7 @@
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
       "@graphql/*": ["graphql/*"],
+      "@hooks/*": ["hooks/*"],
       "@providers/*": ["providers/*"],
       "@styles/*": ["styles/*"],
       "@redux/*": ["redux/*"],

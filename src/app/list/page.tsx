@@ -1,4 +1,4 @@
-import { MemeList } from '@components/MemeList/MemeList';
+import MemeList from '@components/MemeList/MemeList';
 
 export const dynamic = 'force-dynamic';
 

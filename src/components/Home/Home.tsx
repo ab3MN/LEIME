@@ -15,20 +15,10 @@ import 'swiper/css/pagination';
 import { Navigation } from 'swiper/modules';
 import { useAppSelector } from '@redux/hooks';
 import { memesSelector } from '@redux/selectors/meme.selector';
-import { useEffect, useState } from 'react';
+import { withHydration } from 'hoc/withHydration';
 
-export const Home = () => {
+const Home = () => {
   const memes = useAppSelector(memesSelector);
-
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <div className="bg-gray-100 pb-10">
@@ -114,3 +104,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default withHydration(Home);
