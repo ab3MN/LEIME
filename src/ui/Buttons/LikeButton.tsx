@@ -21,6 +21,7 @@ export const LikeButton: FC<Props> = ({ likes, onClick }) => (
     : <HeartIcon
         width={24}
         height={24}
+        className=" hover:fill-red-600"
       />
     }
   </Button>

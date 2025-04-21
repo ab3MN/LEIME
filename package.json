@@ -32,6 +32,7 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.56.0",
     "react-loading-skeleton": "^3.5.0",
+    "swiper": "^11.2.6",
     "underscore": "^1.13.7",
     "yup": "^1.6.1"
   },

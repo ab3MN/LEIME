@@ -1,22 +1,26 @@
 'use client';
 
 import { FC } from 'react';
-import { Image } from '@heroui/react';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { Button, Image } from '@heroui/react';
+import { ArrowRightIcon, ChevronDoubleRightIcon, ChevronDoubleLeftIcon } from '@heroicons/react/24/outline';
 import { Meme } from 'types';
 import clsx from 'clsx';
-import { buttonStyles } from 'styles';
+import { buttonStyles, sliderButtonStyles } from 'styles';
 import { PATH } from '@constants/path';
 import Link from 'next/link';
 import { SectionContainer } from '@ui/Containers/SectionContainer';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import { Navigation } from 'swiper/modules';
 
 interface Props {
   memes: Meme[];
 }
 
 export const Home: FC<Props> = ({ memes }) => {
-  const _memes = memes.slice(0, 3);
-
   return (
     <div className="bg-gray-100">
       <SectionContainer className="bg-blue-800 text-white py-16 text-center">
@@ -34,39 +38,69 @@ export const Home: FC<Props> = ({ memes }) => {
       </SectionContainer>
 
       <SectionContainer className="mb-12">
-        <>
-          <h2 className="text-3xl font-bold text-gray-800 text-center">Popular Memes</h2>
-          <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-stretch">
-            {_memes.map((meme) => (
-              <li
-                key={meme.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
-              >
-                <div className="aspect-w-1 aspect-h-1 w-full">
-                  <Image
-                    src={meme.imgUrl}
-                    alt={meme.title}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
+        <h2 className="text-3xl font-bold text-gray-800 text-center">Popular Memes</h2>
 
-                <div className="flex flex-col p-4 h-full flex-1">
-                  <h3 className="text-xl font-semibold text-gray-700 mb-4">{meme.title}</h3>
-
-                  <div className="mt-auto">
-                    <Link
-                      className={clsx(buttonStyles, 'inline-flex items-center py-2 px-5')}
-                      href={`${PATH.LIST}/${meme.id}`}
-                    >
-                      View Meme
-                      <ArrowRightIcon className="h-5 w-5 ml-2" />
-                    </Link>
+        <div className="relative">
+          <Swiper
+            modules={[Navigation]}
+            slidesPerGroup={1}
+            spaceBetween={24}
+            loop={true}
+            navigation={{
+              nextEl: '.next__button',
+              prevEl: '.prev__button',
+            }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              800: { slidesPerView: 2 },
+              1200: { slidesPerView: 3 },
+            }}
+            className="mt-8"
+          >
+            {memes.map((meme) => (
+              <SwiperSlide key={meme.id}>
+                <li className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+                  <div className="aspect-w-1 aspect-h-1 w-full flex justify-center ">
+                    <Image
+                      src={meme.imgUrl}
+                      alt={meme.title}
+                      className="object-cover w-full h-full"
+                      width={500}
+                      height={500}
+                    />
                   </div>
-                </div>
-              </li>
+
+                  <div className="flex flex-col p-4 h-full flex-1">
+                    <h3 className="text-xl font-semibold text-gray-700 mb-4">{meme.title}</h3>
+
+                    <div className="mt-auto">
+                      <Link
+                        className={clsx(buttonStyles, 'inline-flex items-center py-2 px-5')}
+                        href={`${PATH.LIST}/${meme.id}`}
+                      >
+                        View Meme
+                        <ArrowRightIcon className="h-5 w-5 ml-2" />
+                      </Link>
+                    </div>
+                  </div>
+                </li>
+              </SwiperSlide>
             ))}
-          </ul>
-        </>
+          </Swiper>
+
+          <Button className={clsx(sliderButtonStyles, 'left-0 prev__button')}>
+            <ChevronDoubleLeftIcon
+              width={24}
+              height={24}
+            />
+          </Button>
+          <Button className={clsx(sliderButtonStyles, 'right-0 next__button')}>
+            <ChevronDoubleRightIcon
+              width={24}
+              height={24}
+            />
+          </Button>
+        </div>
       </SectionContainer>
     </div>
   );
