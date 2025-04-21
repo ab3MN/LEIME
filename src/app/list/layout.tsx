@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const ListLayout = ({ children }: { children: ReactNode }) => {
-  return <SectionContainer>{children}</SectionContainer>;
+  return <SectionContainer className="mt-4">{children}</SectionContainer>;
 };
 
 export default ListLayout;

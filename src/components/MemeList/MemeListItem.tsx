@@ -2,8 +2,10 @@
 
 import { Card, CardFooter, CardHeader, Image } from '@heroui/react';
 import { LikeButton } from '@ui/Buttons/LikeButton';
-import { CustomLink } from '@ui/Link/Link';
+import clsx from 'clsx';
+import Link from 'next/link';
 import { FC, memo, ReactNode } from 'react';
+import { baseLink } from 'styles';
 import { Meme } from 'types';
 
 interface Props {
@@ -20,10 +22,12 @@ const MemeListItemComponent: FC<Props> = ({ meme }) => {
     >
       <CardHeader className="absolute z-100 top-0 flex-col items-start bg-black/70 rounded ">
         <h4 className="text-sm">
-          <CustomLink
+          <Link
+            className={clsx(baseLink, 'text-fuchsia-500 ')}
             href={`list/${id}`}
-            label={title}
-          />
+          >
+            {title}
+          </Link>
         </h4>
       </CardHeader>
       <Image

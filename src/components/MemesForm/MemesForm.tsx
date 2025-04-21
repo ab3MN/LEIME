@@ -1,4 +1,4 @@
-import { Form } from '@heroui/react';
+import { Button, Form } from '@heroui/react';
 import { LabeledInput } from '@ui/Inputs/LabeledInput';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -6,7 +6,8 @@ import { Meme } from 'types';
 import { updateMeme } from '@graphql/meme';
 import { FC } from 'react';
 import { memeSchema } from '@utils/schemas';
-import { MainButton } from '@ui/Buttons/MainButton';
+import clsx from 'clsx';
+import { buttonStyles } from 'styles';
 
 interface Props {
   meme: Meme;
@@ -62,11 +63,12 @@ export const MemesForm: FC<Props> = ({ meme }) => {
         err={errors.likes?.message || ''}
       />
 
-      <MainButton
-        label="Submit"
+      <Button
         type="submit"
-        auto
-      />
+        className={clsx(buttonStyles, 'px-[50px] mx-auto block')}
+      >
+        Submit
+      </Button>
     </Form>
   );
 };

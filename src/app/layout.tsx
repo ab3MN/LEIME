@@ -1,8 +1,16 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
+import { Freckle_Face } from 'next/font/google';
 
 import './global.css';
 import { Header } from '@components/Header/Header';
+import { Footer } from '@components/Footer/Footer';
+import clsx from 'clsx';
+
+const freckleFace = Freckle_Face({
+  weight: ['400'],
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Funny Memes',
@@ -15,9 +23,10 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
-      <body>
+      <body className={clsx(freckleFace.className, 'min-h-[100dvh] flex flex-col')}>
         <Header />
-        <main className="px-4"> {children}</main>
+        <main> {children}</main>
+        <Footer />
       </body>
     </html>
   );

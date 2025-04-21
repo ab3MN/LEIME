@@ -1,6 +1,8 @@
 {
   "pages": {},
-  "app": {},
-  "appUsingSizeAdjust": false,
+  "app": {
+    "[project]/src/app/table/page": ["static/media/AMOWz4SXrmKHCvXTohxY_YIEVFi34dpL4w-s.p.156a3bab.woff2"]
+  },
+  "appUsingSizeAdjust": true,
   "pagesUsingSizeAdjust": false
 }

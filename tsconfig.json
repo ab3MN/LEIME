@@ -12,6 +12,7 @@
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
       "@graphql/*": ["graphql/*"],
+      "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
       "@ui/*": ["ui/*"]
     },

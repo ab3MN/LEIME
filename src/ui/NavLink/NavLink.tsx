@@ -1,8 +1,10 @@
 'use client';
 
+import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC } from 'react';
+import { baseLink } from 'styles/links';
 
 interface Props {
   href: string;
@@ -14,7 +16,7 @@ export const NavLink: FC<Props> = ({ href, title }) => {
 
   return (
     <Link
-      className={`pe-2 ${pathname === href ? 'text-fuchsia-400' : 'text-state-600'}  hover:text-fuchsia-400 font-bold`}
+      className={clsx(baseLink, pathname === href && 'text-fuchsia-400')}
       href={href}
     >
       {title}

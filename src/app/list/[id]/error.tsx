@@ -2,8 +2,10 @@
 
 import { FC } from 'react';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
-import { CustomLink } from '@ui/Link/Link';
 import { PATH } from '@constants/path';
+import clsx from 'clsx';
+import { baseLink } from 'styles';
+import Link from 'next/link';
 
 interface Props {
   error: Error;
@@ -16,16 +18,16 @@ const Error: FC<Props> = ({ error }) => {
         <div className="flex justify-center mb-4">
           <ExclamationTriangleIcon className="h-12 w-12 text-red-500" />
         </div>
-
         <p className="text-sm text-gray-500 mb-6 italic">
           <strong>Error:</strong> {error.message}
         </p>
-        <div className="flex justify-center gap-3  items-center">
-          <CustomLink
-            href={PATH.HOME}
-            label="Go to Meme List"
-          />
-        </div>
+
+        <Link
+          className={clsx(baseLink, 'text-center')}
+          href={PATH.LIST}
+        >
+          Go to Homepage
+        </Link>
       </div>
     </div>
   );

@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+html {
+  letter-spacing: 2px;
+}
+
 button,
 a {
   cursor: pointer;

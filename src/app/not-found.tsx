@@ -1,7 +1,9 @@
 import { FC } from 'react';
 import { ExclamationCircleIcon } from '@heroicons/react/24/outline';
-import { CustomLink } from '@ui/Link/Link';
 import { PATH } from '@constants/path';
+import clsx from 'clsx';
+import { baseLink } from 'styles';
+import Link from 'next/link';
 
 const NotFound: FC = () => {
   return (
@@ -15,12 +17,12 @@ const NotFound: FC = () => {
         <p className="text-sm text-gray-500 mb-6 italic">
           Error code: <strong>404</strong>
         </p>
-        <div className="flex justify-center">
-          <CustomLink
-            href={PATH.HOME}
-            label="Go to Homepage"
-          />
-        </div>
+        <Link
+          className={clsx(baseLink, 'text-center')}
+          href={PATH.HOME}
+        >
+          Go to Homepage
+        </Link>
       </div>
     </div>
   );

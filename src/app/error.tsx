@@ -3,8 +3,9 @@
 import { FC, useEffect } from 'react';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 import { Button } from '@heroui/react';
-import { CustomLink } from '@ui/Link/Link';
 import { PATH } from '@constants/path';
+import { baseLink } from 'styles';
+import Link from 'next/link';
 
 interface Props {
   error: Error;
@@ -30,10 +31,12 @@ const Error: FC<Props> = ({ error, reset }) => {
         <div className="flex justify-center gap-3  items-center">
           <Button onPress={reset}>Try again</Button>
 
-          <CustomLink
+          <Link
+            className={baseLink}
             href={PATH.HOME}
-            label="Go to Homepage"
-          />
+          >
+            Go to Homepage
+          </Link>
         </div>
       </div>
     </div>
