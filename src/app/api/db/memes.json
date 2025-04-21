@@ -30,14 +30,14 @@
   {
     "id": "cd8bf327-ea3f-4121-98d7-d78b01ded3ac",
     "title": "It dosn't work",
-    "imgUrl": "https://leime-production-886b.up.railway.app/images/doesntWork.webp",
+    "imgUrl": "https://leime-production-886b.up.railway.app/images/doesntWork.jpg",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "9877afd4-1fee-4ad4-ab31-abf93cbb375e",
     "title": "Drawing on Canvas",
-    "imgUrl": "https://leime-production-886b.up.railway.app/images/canvas.webp",
+    "imgUrl": "https://leime-production-886b.up.railway.app/images/canvas.jpg",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
@@ -51,21 +51,21 @@
   {
     "id": "e2d7b3c5-9d5e-46d9-aa89-6c7251ec2348",
     "title": "When You Deploy on Friday",
-    "imgUrl": "https://leime-production-886b.up.railway.app/images/DeployOnFriday.webp",
+    "imgUrl": "https://leime-production-886b.up.railway.app/images/DeployOnFriday.jpg",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "65f19080-469c-40bd-8062-44929a206afa",
     "title": "CSS Be Like...",
-    "imgUrl": "https://leime-production-886b.up.railway.app/images/CSSBeLike.webp",
+    "imgUrl": "https://leime-production-886b.up.railway.app/images/CSSBeLike.jpg",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   },
   {
     "id": "d7ddf729-66c1-4a62-bb3d-d69652a8d2e2",
     "title": "Just One More Feature",
-    "imgUrl": "https://leime-production-886b.up.railway.app/images/justOneMoreFeature.webp",
+    "imgUrl": "https://leime-production-886b.up.railway.app/images/justOneMoreFeature.jpg",
     "timestamp": "2025-04-18T10:17:04.769Z",
     "likes": -1
   }
