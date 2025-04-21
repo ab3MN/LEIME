@@ -1,9 +1,7 @@
 'use client';
 
-import { FC } from 'react';
 import { Button, Image } from '@heroui/react';
 import { ArrowRightIcon, ChevronDoubleRightIcon, ChevronDoubleLeftIcon } from '@heroicons/react/24/outline';
-import { Meme } from 'types';
 import clsx from 'clsx';
 import { buttonStyles, sliderButtonStyles } from 'styles';
 import { PATH } from '@constants/path';
@@ -15,14 +13,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { Navigation } from 'swiper/modules';
+import { useAppSelector } from '@redux/hooks';
+import { memesSelector } from '@redux/selectors/meme.selector';
 
-interface Props {
-  memes: Meme[];
-}
+export const Home = () => {
+  const memes = useAppSelector(memesSelector);
 
-export const Home: FC<Props> = ({ memes }) => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 pb-10">
       <SectionContainer className="bg-blue-800 text-white py-16 text-center">
         <>
           <h2 className="text-4xl font-extrabold mb-4">Welcome to the Meme Website!</h2>

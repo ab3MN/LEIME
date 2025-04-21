@@ -1,7 +1,7 @@
 'use client';
 
 import { Table, TableBody, TableRow, TableCell, TableHeader, TableColumn, Button, useDisclosure } from '@heroui/react';
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { Meme } from 'types';
 import { PencilIcon } from '@heroicons/react/24/solid';
 import { CustomModal } from '@ui/Modal/Modal';
@@ -9,17 +9,22 @@ import { MemesForm } from '@components/MemesForm/MemesForm';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { baseLink } from 'styles';
-
-interface Props {
-  memes: Meme[];
-}
+import { useAppSelector } from '@redux/hooks';
+import { memesSelector } from '@redux/selectors/meme.selector';
 
 const headers = ['id', 'name', 'image', 'likes', 'actions'];
 
-export const MemeTable: FC<Props> = ({ memes }) => {
+export const MemeTable = () => {
   const { isOpen, onOpenChange, onOpen } = useDisclosure();
 
+  const memes = useAppSelector(memesSelector);
+
   const [selectedMeme, setSelectedMeme] = useState<Meme | null>(null);
+
+  const handleClose = () => {
+    onOpenChange();
+    setSelectedMeme(null);
+  };
 
   return (
     <>
@@ -69,12 +74,12 @@ export const MemeTable: FC<Props> = ({ memes }) => {
         <CustomModal
           isOpen={isOpen}
           title="Edit Meme"
-          onOpenChange={() => {
-            onOpenChange();
-            setSelectedMeme(null);
-          }}
+          onOpenChange={handleClose}
         >
-          <MemesForm meme={selectedMeme} />
+          <MemesForm
+            meme={selectedMeme}
+            closeModal={handleClose}
+          />
         </CustomModal>
       )}
     </>

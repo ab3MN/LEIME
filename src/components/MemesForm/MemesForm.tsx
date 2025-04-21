@@ -8,12 +8,15 @@ import { FC } from 'react';
 import { memeSchema } from '@utils/schemas';
 import clsx from 'clsx';
 import { buttonStyles } from 'styles';
+import { useDispatch } from 'react-redux';
+import { updateMemeById } from '@redux/slices/meme.slice';
 
 interface Props {
   meme: Meme;
+  closeModal: () => void;
 }
 
-export const MemesForm: FC<Props> = ({ meme }) => {
+export const MemesForm: FC<Props> = ({ meme, closeModal }) => {
   const {
     register,
     handleSubmit,
@@ -24,11 +27,16 @@ export const MemesForm: FC<Props> = ({ meme }) => {
     mode: 'onChange',
   });
 
+  const dispatch = useDispatch();
+
   const onSubmit: SubmitHandler<Pick<Meme, 'title' | 'imgUrl' | 'likes'>> = async ({ title, imgUrl, likes }) => {
     const updatedMeme = await updateMeme(meme.id, { title, imgUrl, likes });
 
+    dispatch(updateMemeById(updatedMeme));
+
     if (updatedMeme) {
       reset();
+      closeModal();
     }
   };
 

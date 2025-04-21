@@ -1,12 +1,12 @@
-import { FC } from 'react';
-import { Meme } from 'types';
+'use client';
+
+import { memesSelector } from '@redux/selectors/meme.selector';
 import { MemeListItem } from './MemeListItem';
+import { useAppSelector } from '@redux/hooks';
 
-interface Props {
-  memes: Meme[];
-}
+export const MemeList = () => {
+  const memes = useAppSelector(memesSelector);
 
-export const MemeList: FC<Props> = ({ memes }) => {
   return (
     <ul className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 px-8 space-y-4">
       {memes.map((meme) => (

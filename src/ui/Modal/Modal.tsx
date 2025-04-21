@@ -14,7 +14,8 @@ export const CustomModal: FC<Props> = ({ children, isOpen, onOpenChange, title }
       isOpen={isOpen}
       onOpenChange={onOpenChange}
       size="md"
-      className="bg-black/60 text-white rounded-md fixed top-[40px]"
+      className="bg-black/60 text-white rounded-md fixed top-[50vh] left-[50vw] translate-x-[-50%] translate-y-[-50%]"
+      placement="center"
     >
       <ModalContent>
         {() => (

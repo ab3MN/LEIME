@@ -22,6 +22,7 @@
     "@heroui/accordion": "^2.2.14",
     "@heroui/react": "^2.7.6",
     "@hookform/resolvers": "^5.0.1",
+    "@reduxjs/toolkit": "^2.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.7.4",
     "graphql": "^16.10.0",
@@ -32,6 +33,9 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.56.0",
     "react-loading-skeleton": "^3.5.0",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1",
+    "redux-persist": "^6.0.0",
     "swiper": "^11.2.6",
     "underscore": "^1.13.7",
     "yup": "^1.6.1"
