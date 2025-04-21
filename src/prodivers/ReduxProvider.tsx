@@ -2,20 +2,20 @@
 
 import { ReactNode, useEffect } from 'react';
 import { Provider } from 'react-redux';
-import { store } from './store';
+import { store } from '../redux/store';
 import { Meme } from 'types';
-import { addMemes } from './slices/meme.slice';
+import { addMemes } from '../redux/slices/meme.slice';
 
-interface Props {
+export interface ReduxProviderProps {
   children: ReactNode;
-  initialState?: {
+  initialState: {
     memes: Meme[];
   };
 }
 
-export const ReduxProvider = ({ children, initialState }: Props) => {
+export const ReduxProvider = ({ children, initialState }: ReduxProviderProps) => {
   useEffect(() => {
-    store.dispatch(addMemes(initialState?.memes || []));
+    store.dispatch(addMemes(initialState.memes));
     // eslint-disable-next-line
   }, []);
 

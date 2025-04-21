@@ -15,7 +15,6 @@ import { memesSelector } from '@redux/selectors/meme.selector';
 import { Meme } from 'types';
 import { baseLink } from 'styles';
 import { withHydration } from 'hoc/withHydration';
-import { useDragScroll } from '@hooks/useDragScroll';
 
 const headers = ['id', 'name', 'image', 'likes', 'actions'];
 
@@ -31,14 +30,9 @@ const MemeTable = () => {
     setSelectedMeme(null);
   };
 
-  const scrollRef = useDragScroll();
-
   return (
     <>
-      <div
-        ref={scrollRef}
-        className="w-full overflow-x-scroll overflow-y-hidden cursor-grab active:cursor-grabbing"
-      >
+      <div className="w-full overflow-x-scroll overflow-y-hidden cursor-grab active:cursor-grabbing">
         <Table
           aria-label="Memes table"
           className="min-w-[600px]"

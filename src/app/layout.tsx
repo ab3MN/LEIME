@@ -6,7 +6,7 @@ import './global.css';
 import { Header } from '@components/Header/Header';
 import { Footer } from '@components/Footer/Footer';
 import clsx from 'clsx';
-import { ReduxProvider } from '@redux/providers';
+import { ReduxProvider } from 'prodivers/ReduxProvider';
 import { getMemes } from '@graphql/meme';
 
 const freckleFace = Freckle_Face({
