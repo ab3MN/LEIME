@@ -1,12 +1,14 @@
-import { MemeTable } from '@components/MemeTable/MemeTable';
+// 'use client';
 
-// import { getMemes } from '@graphql/meme';
+import MemeTable from '@components/MemeTable/MemeTable';
 
-// export default async function MemeTablePage() {
-//   const memes = await getMemes();
+// import dynamic from 'next/dynamic';
 
-//   return <MemeTable memes={memes} />;
-// }
+// const MemeTable = dynamic(() => import('@components/MemeTable/MemeTable'), {
+//   ssr: false,
+// });
+
+export const dynamic = 'force-dynamic';
 
 export default function MemeTablePage() {
   return <MemeTable />;

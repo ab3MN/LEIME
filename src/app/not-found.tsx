@@ -1,11 +1,10 @@
-import { FC } from 'react';
 import { ExclamationCircleIcon } from '@heroicons/react/24/outline';
 import { PATH } from '@constants/path';
 import clsx from 'clsx';
 import { baseLink } from 'styles';
 import Link from 'next/link';
 
-const NotFound: FC = () => {
+const NotFound = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full text-center">

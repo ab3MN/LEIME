@@ -16,6 +16,7 @@ interface Props {
 export const ReduxProvider = ({ children, initialState }: Props) => {
   useEffect(() => {
     store.dispatch(addMemes(initialState?.memes || []));
+    // eslint-disable-next-line
   }, []);
 
   return <Provider store={store}>{children}</Provider>;

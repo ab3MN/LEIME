@@ -15,9 +15,20 @@ import 'swiper/css/pagination';
 import { Navigation } from 'swiper/modules';
 import { useAppSelector } from '@redux/hooks';
 import { memesSelector } from '@redux/selectors/meme.selector';
+import { useEffect, useState } from 'react';
 
 export const Home = () => {
   const memes = useAppSelector(memesSelector);
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <div className="bg-gray-100 pb-10">

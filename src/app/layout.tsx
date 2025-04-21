@@ -8,7 +8,6 @@ import { Footer } from '@components/Footer/Footer';
 import clsx from 'clsx';
 import { ReduxProvider } from '@redux/providers';
 import { getMemes } from '@graphql/meme';
-import { Meme } from 'types';
 
 const freckleFace = Freckle_Face({
   weight: ['400'],
@@ -24,11 +23,24 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = async ({ children }: { children: ReactNode }) => {
-  const memes: Meme[] = await getMemes();
-  const initialState = { memes };
+  try {
+    const memes = await getMemes();
 
-  return (
-    <ReduxProvider initialState={initialState}>
+    const initialState = { memes };
+
+    return (
+      <ReduxProvider initialState={initialState}>
+        <html lang="en">
+          <body className={clsx(freckleFace.className, 'min-h-[100dvh] flex flex-col relative')}>
+            <Header />
+            <main> {children}</main>
+            <Footer />
+          </body>
+        </html>
+      </ReduxProvider>
+    );
+  } catch {
+    return (
       <html lang="en">
         <body className={clsx(freckleFace.className, 'min-h-[100dvh] flex flex-col relative')}>
           <Header />
@@ -36,8 +48,8 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
           <Footer />
         </body>
       </html>
-    </ReduxProvider>
-  );
+    );
+  }
 };
 
 export default RootLayout;

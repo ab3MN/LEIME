@@ -1,7 +1,7 @@
 'use client';
 
 import { Table, TableBody, TableRow, TableCell, TableHeader, TableColumn, Button, useDisclosure } from '@heroui/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Meme } from 'types';
 import { PencilIcon } from '@heroicons/react/24/solid';
 import { CustomModal } from '@ui/Modal/Modal';
@@ -25,6 +25,16 @@ export const MemeTable = () => {
     onOpenChange();
     setSelectedMeme(null);
   };
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <>
@@ -85,3 +95,5 @@ export const MemeTable = () => {
     </>
   );
 };
+
+export default MemeTable;
