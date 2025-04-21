@@ -13,15 +13,14 @@ export const CustomModal: FC<Props> = ({ children, isOpen, onOpenChange, title }
     <Modal
       isOpen={isOpen}
       onOpenChange={onOpenChange}
-      size="lg"
-      className="bg-black/60 text-white rounded-md"
-      placement="center"
+      size="md"
+      className="bg-black/60 text-white rounded-md fixed top-[40px]"
     >
       <ModalContent>
         {() => (
           <>
-            <ModalHeader className="flex flex-col gap-1 text-center py-2 text-2xl">{title}</ModalHeader>
-            <ModalBody className="flext justify-center items-center">{children}</ModalBody>
+            <ModalHeader className="flext justify-center pt-5 pb-2 text-2xl">{title}</ModalHeader>
+            <ModalBody className="flext justify-center items-center px-8">{children}</ModalBody>
           </>
         )}
       </ModalContent>

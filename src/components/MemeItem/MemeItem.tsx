@@ -30,7 +30,7 @@ export const MemeItem: FC<Props> = ({ meme }) => {
           </div>
           <Button
             type="submit"
-            className={clsx(buttonStyles, 'px-[50px]')}
+            className={clsx(buttonStyles, 'px-8 py-2')}
           >
             Like
           </Button>

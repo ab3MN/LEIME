@@ -1,4 +1,10 @@
 import { MemeTable } from '@components/MemeTable/MemeTable';
-import { withMemes } from 'hocs/withMemes';
+// import { getMemes } from '@graphql/meme';
 
-export default withMemes(MemeTable);
+import memes from '../api/db/memes.json';
+
+export default async function MemeTablePage() {
+  // const memes = await getMemes();
+
+  return <MemeTable memes={memes} />;
+}
