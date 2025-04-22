@@ -31,7 +31,7 @@ const LabeledInputComponent = <T extends FieldValues>(props: Props<T>) => {
         type={type}
         defaultValue={defaultValue}
         placeholder={placeholder}
-        className="text-gray-800 border-fuchsia-500 border-2 rounded-md p-2"
+        className="text-sky-500 border-fuchsia-500 border-2 rounded-md p-2 "
       />
       <p className={clsx('text-red-400  rounded-md pt-2 invisible', err.length && 'visible')}>{err ? err : 'a'}</p>
     </div>
