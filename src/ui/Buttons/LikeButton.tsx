@@ -10,8 +10,11 @@ interface Props {
   onClick?: () => void;
 }
 
-export const LikeButton: FC<Props> = ({ likes, onClick }) => (
-  <Button onClickCapture={onClick}>
+export const LikeButton: FC<Props> = ({ likes, onClick = () => {} }) => (
+  <Button
+    onPress={onClick}
+    type="button"
+  >
     {likes ?
       <HeartSolid
         width={24}

@@ -32,7 +32,7 @@ const MemeTable = () => {
 
   return (
     <>
-      <div className="w-full overflow-x-scroll overflow-y-hidden cursor-grab active:cursor-grabbing">
+      <div className="w-full overflow-x-scroll overflow-y-hidden ">
         <Table
           aria-label="Memes table"
           className="min-w-[600px]"

@@ -29,7 +29,7 @@ export const MemeItem: FC<Props> = ({ meme }) => {
             <span className="text-xl font-medium text-gray-800">{meme.likes}</span>
           </div>
           <Button
-            type="submit"
+            type="button"
             className={clsx(buttonStyles, 'px-8 py-2')}
           >
             Like
